@@ -127,13 +127,13 @@ h2{font-size:clamp(30px,4vw,45px);line-height:1.25;color:var(--navy);margin:8px 
 .project-card img{width:100%;height:100%;min-height:240px;object-fit:cover;display:block;transition:.25s}
 .project-card:hover img{transform:scale(1.025)}
 .project-no{position:absolute;top:12px;left:12px;width:38px;height:38px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.92);color:var(--navy);font-weight:700}
-#development{background:linear-gradient(155deg,#151827,#252844);color:#f3f4fb}
-#development h2,#development .next-dev h3{color:#fff}
-#development .section-no,#development .lead{color:#bfc5dc}
-#development .problem{background:rgba(255,255,255,.95);border-color:rgba(255,255,255,.12)}
-#development .next-dev{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12)}
-#development .next-dev p{color:#d9deef}
-#development .process-step{background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.13);color:#eef0fb}
+#development{background:linear-gradient(180deg,#f7f3fb,#ffffff);color:var(--ink)}
+#development h2,#development .next-dev h3{color:var(--navy)}
+#development .section-no,#development .lead{color:#6f748b}
+#development .problem{background:#fff;border-color:#e4e0ec;box-shadow:0 12px 30px rgba(44,38,72,.07)}
+#development .next-dev{background:#fff;border-color:#e4e0ec;box-shadow:0 12px 30px rgba(44,38,72,.07)}
+#development .next-dev p{color:#5f6476}
+#development .process-step{background:#f0ebf8;border-color:#dfd4ee;color:#5d4a78}
 #development:before{background:#8377c7}
 .overview:before{background:#8fc8eb}
 .duties:before{background:#8ed0b0}
@@ -204,8 +204,8 @@ footer{background:#091f35;color:#c8d6e2;text-align:center;padding:38px 20px}
    <a href="#experience">ประสบการณ์</a>
    <a href="#duties">หน้าที่</a>
    <a href="#projects">กิจกรรม/โครงการ</a>
-   <a href="#development">การพัฒนา</a>
    <a href="#system-literacy">ระบบที่พัฒนา</a>
+   <a href="#development">การพัฒนา</a>
   </div>
  </div>
 </nav>
@@ -402,66 +402,6 @@ footer{background:#091f35;color:#c8d6e2;text-align:center;padding:38px 20px}
  </div>
 </section>
 
-<section id="development">
- <div class="container">
-  <div class="section-head reveal">
-   <span class="section-no">IMPROVEMENT</span>
-   <h2>ปัญหาที่พบ / การแก้ไข / การพัฒนาตนเอง</h2>
-   <p class="lead">สรุปประเด็นจากลักษณะการปฏิบัติงานที่ต้องดูแลทั้งระบบ อุปกรณ์ ข้อมูล และผู้ใช้งานหลายกลุ่ม พร้อมแนวทางที่ใช้ในการสนับสนุนการทำงานให้มีประสิทธิภาพมากขึ้น</p>
-  </div>
-  <div class="problem-grid">
-   <div class="problem red reveal">
-    <h3>⚠️ ประเด็นที่พบในการปฏิบัติงาน</h3>
-    <ul>
-     <li>มีอุปกรณ์ ระบบ และงานสนับสนุนหลายประเภทที่ต้องดูแลอย่างต่อเนื่อง</li>
-     <li>ผู้ใช้งานมีหลายกลุ่มและมีระดับทักษะด้านเทคโนโลยีแตกต่างกัน</li>
-     <li>ข้อมูลสำหรับการรายงานมาจากหลายฝ่ายและหลายพื้นที่ จึงต้องตรวจสอบและจัดระบบก่อนนำไปใช้</li>
-     <li>ภารกิจเร่งด่วนบางช่วงเกิดขึ้นพร้อมกับงานประจำ ทำให้ต้องบริหารลำดับความสำคัญของงานอย่างเหมาะสม</li>
-    </ul>
-   </div>
-   <div class="problem orange reveal">
-    <h3>💡 แนวทางการแก้ไขและสนับสนุน</h3>
-    <ul>
-     <li>ตรวจสอบ บำรุงรักษา และแก้ไขปัญหาอุปกรณ์และระบบอย่างต่อเนื่อง</li>
-     <li>ให้คำแนะนำแก่ผู้ใช้งานโดยปรับวิธีการอธิบายให้เหมาะสมกับแต่ละกลุ่ม</li>
-     <li>พัฒนาระบบและรูปแบบการจัดเก็บข้อมูลให้เป็นระบบ ลดความซ้ำซ้อน และสะดวกต่อการรายงาน</li>
-     <li>ใช้เทคโนโลยีและเครื่องมือดิจิทัลช่วยลดขั้นตอนการทำงานและเพิ่มความรวดเร็วในการให้บริการ</li>
-     <li>วางแผนและจัดลำดับความสำคัญของภารกิจ เพื่อให้สามารถสนับสนุนงานเร่งด่วนควบคู่กับงานประจำได้</li>
-    </ul>
-   </div>
-   <div class="problem green reveal">
-    <h3>🚀 การพัฒนาตนเอง</h3>
-    <ul>
-     <li>ศึกษาความรู้และเทคโนโลยีใหม่ด้าน AI, Web Development, Database และระบบสารสนเทศ</li>
-     <li>พัฒนาทักษะด้านการวิเคราะห์ข้อมูลและการนำเสนอข้อมูลเพื่อสนับสนุนการบริหารงาน</li>
-     <li>พัฒนาทักษะการสื่อสารและการถ่ายทอดความรู้ เพื่อให้คำแนะนำแก่บุคลากรได้ชัดเจนยิ่งขึ้น</li>
-     <li>ประยุกต์ใช้เครื่องมือใหม่ในการพัฒนาระบบ ลดภาระงานซ้ำซ้อน และเพิ่มประสิทธิภาพการปฏิบัติงาน</li>
-    </ul>
-   </div>
-  </div>
-
-  <div class="next-dev reveal">
-   <h3>แนวทางการพัฒนาตนเองในปีงบประมาณถัดไป</h3>
-   <p>มุ่งพัฒนาความรู้และทักษะด้านการวิเคราะห์ ออกแบบ และพัฒนาระบบสารสนเทศขนาดใหญ่ เพื่อสนับสนุนการบริหารและการปฏิบัติงานของหน่วยงาน เช่น ระบบสารบรรณอิเล็กทรอนิกส์ และระบบรายงานผลการดำเนินงาน โดยให้ความสำคัญกับการสำรวจความต้องการของผู้ใช้งาน ผู้บริหาร และแต่ละกลุ่มงานก่อนเริ่มพัฒนาระบบ เพื่อให้ระบบที่พัฒนาขึ้นสอดคล้องกับกระบวนการทำงานจริง ลดความซ้ำซ้อน และสามารถนำไปใช้งานได้อย่างมีประสิทธิภาพ</p>
-   <div class="process-steps">
-    <span class="process-step">สำรวจความต้องการผู้ใช้งาน</span>
-    <span class="process-step">วิเคราะห์กระบวนงาน</span>
-    <span class="process-step">ออกแบบระบบ</span>
-    <span class="process-step">พัฒนาและทดสอบ</span>
-    <span class="process-step">รับข้อเสนอแนะ</span>
-    <span class="process-step">ปรับปรุงและนำใช้งานจริง</span>
-   </div>
-  </div>
-
-  <div class="next-dev reveal" style="margin-top:18px">
-   <h3>ทิศทางการพัฒนาอย่างต่อเนื่อง</h3>
-   <p>นำประสบการณ์จากการพัฒนาระบบที่ใช้งานจริงมาต่อยอด ทั้งด้านการจัดการข้อมูล การลดขั้นตอนการทำงาน การสนับสนุนผู้ใช้งาน และการพัฒนาระบบให้สอดคล้องกับภารกิจของหน่วยงาน โดยนำเสนอระบบสำคัญแยกเป็นรายระบบในส่วนถัดไป</p>
-  </div>
-
-  <!-- preserve existing next-dev marker --> 
-  </div>
-</section>
-
 <section class="system-showcase system-light" id="system-literacy">
  <div class="system-layout">
   <div class="system-media reveal">
@@ -524,6 +464,66 @@ footer{background:#091f35;color:#c8d6e2;text-align:center;padding:38px 20px}
    <span class="system-tag">Workflow • Travel • Finance</span>
   </div>
  </div>
+</section>
+
+<section id="development">
+ <div class="container">
+  <div class="section-head reveal">
+   <span class="section-no">IMPROVEMENT</span>
+   <h2>ปัญหาที่พบ / การแก้ไข / การพัฒนาตนเอง</h2>
+   <p class="lead">สรุปประเด็นจากลักษณะการปฏิบัติงานที่ต้องดูแลทั้งระบบ อุปกรณ์ ข้อมูล และผู้ใช้งานหลายกลุ่ม พร้อมแนวทางที่ใช้ในการสนับสนุนการทำงานให้มีประสิทธิภาพมากขึ้น</p>
+  </div>
+  <div class="problem-grid">
+   <div class="problem red reveal">
+    <h3>⚠️ ประเด็นที่พบในการปฏิบัติงาน</h3>
+    <ul>
+     <li>มีอุปกรณ์ ระบบ และงานสนับสนุนหลายประเภทที่ต้องดูแลอย่างต่อเนื่อง</li>
+     <li>ผู้ใช้งานมีหลายกลุ่มและมีระดับทักษะด้านเทคโนโลยีแตกต่างกัน</li>
+     <li>ข้อมูลสำหรับการรายงานมาจากหลายฝ่ายและหลายพื้นที่ จึงต้องตรวจสอบและจัดระบบก่อนนำไปใช้</li>
+     <li>ภารกิจเร่งด่วนบางช่วงเกิดขึ้นพร้อมกับงานประจำ ทำให้ต้องบริหารลำดับความสำคัญของงานอย่างเหมาะสม</li>
+    </ul>
+   </div>
+   <div class="problem orange reveal">
+    <h3>💡 แนวทางการแก้ไขและสนับสนุน</h3>
+    <ul>
+     <li>ตรวจสอบ บำรุงรักษา และแก้ไขปัญหาอุปกรณ์และระบบอย่างต่อเนื่อง</li>
+     <li>ให้คำแนะนำแก่ผู้ใช้งานโดยปรับวิธีการอธิบายให้เหมาะสมกับแต่ละกลุ่ม</li>
+     <li>พัฒนาระบบและรูปแบบการจัดเก็บข้อมูลให้เป็นระบบ ลดความซ้ำซ้อน และสะดวกต่อการรายงาน</li>
+     <li>ใช้เทคโนโลยีและเครื่องมือดิจิทัลช่วยลดขั้นตอนการทำงานและเพิ่มความรวดเร็วในการให้บริการ</li>
+     <li>วางแผนและจัดลำดับความสำคัญของภารกิจ เพื่อให้สามารถสนับสนุนงานเร่งด่วนควบคู่กับงานประจำได้</li>
+    </ul>
+   </div>
+   <div class="problem green reveal">
+    <h3>🚀 การพัฒนาตนเอง</h3>
+    <ul>
+     <li>ศึกษาความรู้และเทคโนโลยีใหม่ด้าน AI, Web Development, Database และระบบสารสนเทศ</li>
+     <li>พัฒนาทักษะด้านการวิเคราะห์ข้อมูลและการนำเสนอข้อมูลเพื่อสนับสนุนการบริหารงาน</li>
+     <li>พัฒนาทักษะการสื่อสารและการถ่ายทอดความรู้ เพื่อให้คำแนะนำแก่บุคลากรได้ชัดเจนยิ่งขึ้น</li>
+     <li>ประยุกต์ใช้เครื่องมือใหม่ในการพัฒนาระบบ ลดภาระงานซ้ำซ้อน และเพิ่มประสิทธิภาพการปฏิบัติงาน</li>
+    </ul>
+   </div>
+  </div>
+
+  <div class="next-dev reveal">
+   <h3>แนวทางการพัฒนาตนเองในปีงบประมาณถัดไป</h3>
+   <p>มุ่งพัฒนาความรู้และทักษะด้านการวิเคราะห์ ออกแบบ และพัฒนาระบบสารสนเทศขนาดใหญ่ เพื่อสนับสนุนการบริหารและการปฏิบัติงานของหน่วยงาน เช่น ระบบสารบรรณอิเล็กทรอนิกส์ และระบบรายงานผลการดำเนินงาน โดยให้ความสำคัญกับการสำรวจความต้องการของผู้ใช้งาน ผู้บริหาร และแต่ละกลุ่มงานก่อนเริ่มพัฒนาระบบ เพื่อให้ระบบที่พัฒนาขึ้นสอดคล้องกับกระบวนการทำงานจริง ลดความซ้ำซ้อน และสามารถนำไปใช้งานได้อย่างมีประสิทธิภาพ</p>
+   <div class="process-steps">
+    <span class="process-step">สำรวจความต้องการผู้ใช้งาน</span>
+    <span class="process-step">วิเคราะห์กระบวนงาน</span>
+    <span class="process-step">ออกแบบระบบ</span>
+    <span class="process-step">พัฒนาและทดสอบ</span>
+    <span class="process-step">รับข้อเสนอแนะ</span>
+    <span class="process-step">ปรับปรุงและนำใช้งานจริง</span>
+   </div>
+  </div>
+
+  <div class="next-dev reveal" style="margin-top:18px">
+   <h3>ทิศทางการพัฒนาอย่างต่อเนื่อง</h3>
+   <p>นำประสบการณ์จากการพัฒนาระบบที่ใช้งานจริงมาต่อยอด ทั้งด้านการจัดการข้อมูล การลดขั้นตอนการทำงาน การสนับสนุนผู้ใช้งาน และการพัฒนาระบบให้สอดคล้องกับภารกิจของหน่วยงาน โดยนำเสนอระบบสำคัญแยกเป็นรายระบบในส่วนถัดไป</p>
+  </div>
+
+  <!-- preserve existing next-dev marker --> 
+  </div>
 </section>
 
 <footer>
