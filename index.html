@@ -117,6 +117,13 @@ h2{font-size:clamp(30px,4vw,45px);line-height:1.25;color:var(--navy);margin:8px 
 .projects{background:linear-gradient(180deg,#eef4f8,#ffffff);color:var(--ink)}
 .projects h2{color:var(--navy)}
 .projects .section-no,.projects .lead{color:#6e8297}
+.projects .section-head{text-align:center;margin-left:auto;margin-right:auto;max-width:980px}
+.projects .section-head h2{color:#173b67}
+.projects .section-head .section-no{color:#8b5e2d}
+.projects .gallery-title{text-align:center;color:#2c6f8f}
+.projects .gallery-note{text-align:center;margin-left:auto;margin-right:auto}
+.projects .gallery-group:nth-of-type(even) .project-no{background:#173b67;color:#fff}
+.projects .gallery-group:nth-of-type(odd) .project-no{background:#f3e8d7;color:#7a4d1f}
 .projects .gallery-title{color:var(--navy)}
 .projects .gallery-note{color:#66798c}
 .projects .project-card{background:#dce8f0;box-shadow:0 12px 30px rgba(18,56,95,.10)}
@@ -154,6 +161,12 @@ h2{font-size:clamp(30px,4vw,45px);line-height:1.25;color:var(--navy);margin:8px 
 .next-dev p{color:#56687a}
 .process-steps{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
 .process-step{background:#eef5fb;color:#315a79;border:1px solid #dbe8f2;border-radius:999px;padding:9px 13px;font-size:14px;font-weight:500}
+.systems-intro{min-height:46vh;display:flex;align-items:center;text-align:center;background:linear-gradient(155deg,#0d2439,#173f5f);color:#fff}
+.systems-intro .container{max-width:1000px}
+.systems-intro .section-no{color:#9fc3db}
+.systems-intro h2{color:#fff;font-size:clamp(34px,4.8vw,60px);margin:12px 0 14px}
+.systems-intro p{color:#c8d9e5;font-size:18px}
+.systems-intro:before{background:#5b91b8}
 .system-showcase{min-height:92vh;display:flex;align-items:center;padding:96px 24px}
 .system-showcase.system-light{background:linear-gradient(180deg,#f7fafc,#ffffff);color:var(--ink)}
 .system-showcase.system-dark{background:linear-gradient(155deg,#0b2135,#142f49);color:#edf6fc}
@@ -170,7 +183,9 @@ h2{font-size:clamp(30px,4vw,45px);line-height:1.25;color:var(--navy);margin:8px 
 .system-dark .image-waiting{color:#aebfd0}
 .system-index{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;margin-bottom:18px}
 .system-dark .system-index{background:#fff;color:#102d4b}
+.system-copy{text-align:center}
 .system-copy h2{font-size:clamp(32px,4vw,52px);margin-bottom:18px}
+.system-copy .system-index{margin-left:auto;margin-right:auto}
 .system-dark .system-copy h2{color:#fff}
 .system-copy p{font-size:17px;color:#5b6d7e}
 .system-dark .system-copy p{color:#c4d4e2}
@@ -206,7 +221,7 @@ footer{background:#091f35;color:#c8d6e2;text-align:center;padding:38px 20px}
    <a href="#experience">ประสบการณ์</a>
    <a href="#duties">หน้าที่</a>
    <a href="#projects">กิจกรรม/โครงการ</a>
-   <a href="#system-literacy">ระบบที่พัฒนา</a>
+   <a href="#systems-intro">ระบบที่พัฒนา</a>
    <a href="#development">การพัฒนา</a>
   </div>
  </div>
@@ -365,8 +380,8 @@ footer{background:#091f35;color:#c8d6e2;text-align:center;padding:38px 20px}
  <div class="container">
   <div class="section-head reveal">
    <span class="section-no">ACTIVITIES & PROJECTS</span>
-   <h2>ภาพประกอบการปฏิบัติงาน</h2>
-   <p class="lead">แสดงเฉพาะรูปจริงที่อัปโหลดแล้ว โดยยังไม่แสดงหมวดการอบรมจนกว่าจะเปลี่ยนไฟล์ placeholder เป็นรูปจริง</p>
+   <h2>ผลการปฏิบัติงาน 6 เดือน เมษายน - กันยายน 2569</h2>
+   <p class="lead">ภาพประกอบผลการปฏิบัติงานและภารกิจที่ดำเนินการในรอบการประเมิน</p>
   </div>
   <div class="gallery-group reveal">
    <h3 class="gallery-title">ภาพการประชุม/ภารกิจ</h3>
@@ -382,8 +397,6 @@ footer{background:#091f35;color:#c8d6e2;text-align:center;padding:38px 20px}
    </div>
   </div>
   <div class="gallery-group reveal">
-   <h3 class="gallery-title">กิจกรรมและโครงการ</h3>
-   <p class="gallery-note">ภาพกิจกรรมและโครงการที่อัปโหลดไว้ในโฟลเดอร์ projects</p>
    <div class="gallery">
     <div class="project-card"><span class="project-no">01</span><img src="projects/1.jpg" alt="กิจกรรมและโครงการ 1" onerror="this.closest('.project-card').remove()"></div>
     <div class="project-card"><span class="project-no">02</span><img src="projects/2.jpg" alt="กิจกรรมและโครงการ 2" onerror="this.closest('.project-card').remove()"></div>
@@ -392,6 +405,15 @@ footer{background:#091f35;color:#c8d6e2;text-align:center;padding:38px 20px}
     <div class="project-card"><span class="project-no">05</span><img src="projects/5.jpg" alt="กิจกรรมและโครงการ 5" onerror="this.closest('.project-card').remove()"></div>
    </div>
   </div>
+ </div>
+</section>
+
+
+<section class="systems-intro" id="systems-intro">
+ <div class="container reveal">
+  <span class="section-no">SYSTEM DEVELOPMENT</span>
+  <h2>ระบบที่พัฒนามาในปีงบประมาณ 2569</h2>
+  <p>ระบบสารสนเทศที่พัฒนาและนำมาใช้เพื่อสนับสนุนการปฏิบัติงานของหน่วยงานและบุคลากร</p>
  </div>
 </section>
 
