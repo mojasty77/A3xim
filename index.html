@@ -99,6 +99,10 @@ h2{font-size:clamp(30px,4vw,45px);line-height:1.25;color:var(--navy);margin:8px 
 .projects{background:linear-gradient(160deg,#102d4b,#183f63);color:#fff}
 .projects h2{color:#fff}
 .projects .section-no,.projects .lead{color:#b9cada}
+.gallery-group{margin-top:34px}
+.gallery-group:first-of-type{margin-top:0}
+.gallery-title{font-size:23px;color:#fff;margin-bottom:14px}
+.gallery-note{color:#b9cada;margin:-7px 0 18px}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .project-card{position:relative;overflow:hidden;border-radius:18px;background:#1d466b;min-height:240px}
 .project-card img{width:100%;height:100%;min-height:240px;object-fit:cover;display:block;transition:.25s}
@@ -313,19 +317,32 @@ footer{background:#091f35;color:#c8d6e2;text-align:center;padding:38px 20px}
  <div class="container">
   <div class="section-head reveal">
    <span class="section-no">ACTIVITIES & PROJECTS</span>
-   <h2>กิจกรรมและโครงการที่ได้รับมอบหมายให้ดำเนินการ</h2>
-   <p class="lead">ส่วนนี้แสดงภาพประกอบการปฏิบัติงานและกิจกรรมตามที่ได้รับมอบหมาย โดยภาพที่ยังไม่ได้อัปโหลดจะไม่แสดงบนหน้าเว็บไซต์</p>
+   <h2>ภาพประกอบการปฏิบัติงาน</h2>
+   <p class="lead">แสดงเฉพาะรูปจริงที่อัปโหลดแล้ว โดยยังไม่แสดงหมวดการอบรมจนกว่าจะเปลี่ยนไฟล์ placeholder เป็นรูปจริง</p>
   </div>
-  <div class="gallery">
-   <div class="project-card"><span class="project-no">01</span><img src="projects/1.jpg" alt="กิจกรรม 1" onerror="this.closest('.project-card').remove()"></div>
-   <div class="project-card"><span class="project-no">02</span><img src="projects/2.jpg" alt="กิจกรรม 2" onerror="this.closest('.project-card').remove()"></div>
-   <div class="project-card"><span class="project-no">03</span><img src="projects/3.jpg" alt="กิจกรรม 3" onerror="this.closest('.project-card').remove()"></div>
-   <div class="project-card"><span class="project-no">04</span><img src="projects/4.jpg" alt="กิจกรรม 4" onerror="this.closest('.project-card').remove()"></div>
-   <div class="project-card"><span class="project-no">05</span><img src="projects/5.jpg" alt="กิจกรรม 5" onerror="this.closest('.project-card').remove()"></div>
-   <div class="project-card"><span class="project-no">06</span><img src="projects/6.jpg" alt="กิจกรรม 6" onerror="this.closest('.project-card').remove()"></div>
-   <div class="project-card"><span class="project-no">07</span><img src="projects/7.jpg" alt="กิจกรรม 7" onerror="this.closest('.project-card').remove()"></div>
-   <div class="project-card"><span class="project-no">08</span><img src="projects/8.jpg" alt="กิจกรรม 8" onerror="this.closest('.project-card').remove()"></div>
-   <div class="project-card"><span class="project-no">09</span><img src="projects/9.jpg" alt="กิจกรรม 9" onerror="this.closest('.project-card').remove()"></div>
+  <div class="gallery-group reveal">
+   <h3 class="gallery-title">ภาพการประชุม/ภารกิจ</h3>
+   <p class="gallery-note">ภาพประกอบภารกิจและการประชุมที่เกี่ยวข้องกับการปฏิบัติงาน</p>
+   <div class="gallery">
+    <div class="project-card"><span class="project-no">01</span><img src="meetings/1.jpg" alt="ภาพการประชุมและภารกิจ 1" onerror="this.closest('.project-card').remove()"></div>
+    <div class="project-card"><span class="project-no">02</span><img src="meetings/2.jpg" alt="ภาพการประชุมและภารกิจ 2" onerror="this.closest('.project-card').remove()"></div>
+    <div class="project-card"><span class="project-no">03</span><img src="meetings/3.jpg" alt="ภาพการประชุมและภารกิจ 3" onerror="this.closest('.project-card').remove()"></div>
+    <div class="project-card"><span class="project-no">04</span><img src="meetings/4.jpg" alt="ภาพการประชุมและภารกิจ 4" onerror="this.closest('.project-card').remove()"></div>
+    <div class="project-card"><span class="project-no">05</span><img src="meetings/5.jpg" alt="ภาพการประชุมและภารกิจ 5" onerror="this.closest('.project-card').remove()"></div>
+    <div class="project-card"><span class="project-no">06</span><img src="meetings/6.jpg" alt="ภาพการประชุมและภารกิจ 6" onerror="this.closest('.project-card').remove()"></div>
+    <div class="project-card"><span class="project-no">07</span><img src="meetings/7.jpg" alt="ภาพการประชุมและภารกิจ 7" onerror="this.closest('.project-card').remove()"></div>
+   </div>
+  </div>
+  <div class="gallery-group reveal">
+   <h3 class="gallery-title">กิจกรรมและโครงการ</h3>
+   <p class="gallery-note">ภาพกิจกรรมและโครงการที่อัปโหลดไว้ในโฟลเดอร์ projects</p>
+   <div class="gallery">
+    <div class="project-card"><span class="project-no">01</span><img src="projects/1.jpg" alt="กิจกรรมและโครงการ 1" onerror="this.closest('.project-card').remove()"></div>
+    <div class="project-card"><span class="project-no">02</span><img src="projects/2.jpg" alt="กิจกรรมและโครงการ 2" onerror="this.closest('.project-card').remove()"></div>
+    <div class="project-card"><span class="project-no">03</span><img src="projects/3.jpg" alt="กิจกรรมและโครงการ 3" onerror="this.closest('.project-card').remove()"></div>
+    <div class="project-card"><span class="project-no">04</span><img src="projects/4.jpg" alt="กิจกรรมและโครงการ 4" onerror="this.closest('.project-card').remove()"></div>
+    <div class="project-card"><span class="project-no">05</span><img src="projects/5.jpg" alt="กิจกรรมและโครงการ 5" onerror="this.closest('.project-card').remove()"></div>
+   </div>
   </div>
  </div>
 </section>
