@@ -64,7 +64,7 @@ h2{font-size:clamp(30px,4vw,45px);line-height:1.25;color:var(--navy);margin:8px 
 .zodiac-icon{font-size:36px}
 .map-card{grid-column:1/-1;background:#fff;border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:0 9px 28px rgba(18,56,95,.045)}
 .map-card h3{color:var(--navy);font-size:20px;margin-bottom:12px}
-.map-frame{width:100%;height:360px;border:0;border-radius:16px;display:block}
+.map-frame{width:100%;height:220px;border:0;border-radius:16px;display:block}
 .map-caption{margin-top:10px;color:var(--muted);font-size:14px}
 .education{display:grid;gap:14px}
 .edu{display:flex;gap:15px;align-items:flex-start;padding:17px;border-radius:15px;background:#f7fafd}
@@ -126,6 +126,11 @@ h2{font-size:clamp(30px,4vw,45px);line-height:1.25;color:var(--navy);margin:8px 
 .dev h3{color:var(--navy);font-size:22px}
 .dev-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:18px}
 .dev-item{background:rgba(255,255,255,.9);border:1px solid #e1eaf1;border-radius:15px;padding:18px;text-align:center}
+.next-dev{margin-top:22px;border-radius:22px;padding:28px;background:#fff;border:1px solid var(--line)}
+.next-dev h3{color:var(--navy);font-size:22px;margin-bottom:10px}
+.next-dev p{color:#56687a}
+.process-steps{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.process-step{background:#eef5fb;color:#315a79;border:1px solid #dbe8f2;border-radius:999px;padding:9px 13px;font-size:14px;font-weight:500}
 footer{background:#091f35;color:#c8d6e2;text-align:center;padding:38px 20px}
 .reveal{opacity:0;transform:translateY(22px);transition:.65s ease}
 .reveal.show{opacity:1;transform:none}
@@ -136,7 +141,7 @@ footer{background:#091f35;color:#c8d6e2;text-align:center;padding:38px 20px}
 }
 @media(max-width:560px){
  .hero-main-title{font-size:clamp(26px,8vw,38px);margin-bottom:28px}
- .map-frame{height:300px}
+ .map-frame{height:210px}
  section{padding:76px 18px}.personal-row{grid-template-columns:1fr}.zodiac{grid-template-columns:1fr}.dev-grid{grid-template-columns:1fr}
 }
 </style>
@@ -392,6 +397,18 @@ footer{background:#091f35;color:#c8d6e2;text-align:center;padding:38px 20px}
     <div class="dev-item">🌐<br><strong>Web & Systems</strong><br><span class="label">พัฒนาระบบให้ตรงกับผู้ใช้งาน</span></div>
     <div class="dev-item">📊<br><strong>Data</strong><br><span class="label">จัดระบบข้อมูลเพื่อการรายงาน</span></div>
     <div class="dev-item">🧑‍🏫<br><strong>Support</strong><br><span class="label">สนับสนุนบุคลากรและพื้นที่</span></div>
+   </div>
+  </div>
+  <div class="next-dev reveal">
+   <h3>แนวทางการพัฒนาตนเองในปีงบประมาณถัดไป</h3>
+   <p>มุ่งพัฒนาความรู้และทักษะด้านการวิเคราะห์ ออกแบบ และพัฒนาระบบสารสนเทศขนาดใหญ่ เพื่อสนับสนุนการบริหารและการปฏิบัติงานของหน่วยงาน เช่น ระบบสารบรรณอิเล็กทรอนิกส์ และระบบรายงานผลการดำเนินงาน โดยให้ความสำคัญกับการสำรวจความต้องการของผู้ใช้งาน ผู้บริหาร และกลุ่มงานที่เกี่ยวข้องก่อนเริ่มพัฒนาระบบ เพื่อให้ระบบที่พัฒนาขึ้นสอดคล้องกับกระบวนการทำงานจริง ลดความซ้ำซ้อน และสามารถนำไปใช้งานได้อย่างมีประสิทธิภาพ</p>
+   <div class="process-steps">
+    <span class="process-step">สำรวจความต้องการ</span>
+    <span class="process-step">วิเคราะห์กระบวนงาน</span>
+    <span class="process-step">ออกแบบระบบ</span>
+    <span class="process-step">พัฒนาและทดสอบ</span>
+    <span class="process-step">รับข้อเสนอแนะ</span>
+    <span class="process-step">ปรับปรุงและนำใช้งานจริง</span>
    </div>
   </div>
  </div>
