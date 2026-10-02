@@ -11,16 +11,29 @@
 <style>
 :root{--navy:#12385f;--blue:#1f6fa9;--sky:#eaf4fb;--ink:#1f2f3f;--muted:#65768a;--line:#dfe8f0;--soft:#f5f8fb;--green:#2f8a5f;--gold:#c8902f}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-snap-type:y proximity}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
 body{font-family:"Kanit",sans-serif;color:var(--ink);background:#fff;line-height:1.7}
 a{text-decoration:none;color:inherit}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(18,56,95,.08)}
-.nav{max-width:1220px;margin:auto;padding:13px 24px;display:flex;justify-content:space-between;align-items:center;gap:20px}
-.brand{font-weight:700;color:var(--navy);letter-spacing:.04em}
-.links{display:flex;gap:18px;font-size:14px;color:#516477}
-.links a:hover{color:var(--blue)}
-section{padding:92px 24px;scroll-snap-align:start;position:relative;overflow:hidden;transition:transform .85s cubic-bezier(.2,.75,.25,1),opacity .85s ease,border-radius .85s ease,background 1s ease}
-section.morph-section{transform:scale(.985);opacity:.88;border-radius:42px}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.93);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid rgba(18,56,95,.10);box-shadow:0 3px 20px rgba(10,33,57,.08);transition:background .5s ease,border-color .5s ease,box-shadow .5s ease}
+.nav{max-width:1220px;margin:auto;padding:11px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.brand{font-weight:700;color:var(--navy);letter-spacing:.015em;transition:color .4s ease;flex-shrink:0}
+.links{display:flex;gap:8px;font-size:13px;align-items:center}
+.links a{display:inline-flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;padding:8px 12px;border-radius:999px;color:#fff;font-weight:500;background:linear-gradient(135deg,var(--menu-start),var(--menu-end));box-shadow:0 3px 9px rgba(9,31,53,.12);transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s ease,filter .3s ease}
+.links a:nth-child(1){--menu-start:#1761a0;--menu-end:#318ec8}
+.links a:nth-child(2){--menu-start:#6251a9;--menu-end:#947bd2}
+.links a:nth-child(3){--menu-start:#16786d;--menu-end:#32a994}
+.links a:nth-child(4){--menu-start:#a45a25;--menu-end:#d59448}
+.links a:nth-child(5){--menu-start:#3259a6;--menu-end:#6d90d7}
+.links a:nth-child(6){--menu-start:#98436c;--menu-end:#cc7798}
+.links a:hover,.links a:focus-visible{transform:translateY(-3px);filter:brightness(1.08);box-shadow:0 9px 20px rgba(11,37,63,.23)}
+.links a.is-active{transform:translateY(-2px);box-shadow:0 0 0 2px #fff,0 0 0 4px rgba(37,113,177,.60),0 8px 18px rgba(9,31,53,.20);filter:saturate(1.18)}
+html[data-nav-theme="dark"] nav{background:rgba(9,24,43,.93);border-color:rgba(255,255,255,.13);box-shadow:0 3px 20px rgba(0,0,0,.22)}
+html[data-nav-theme="dark"] .brand{color:#fff}
+html[data-nav-theme="dark"] .links a.is-active{box-shadow:0 0 0 2px #142c45,0 0 0 4px rgba(196,220,242,.75),0 8px 18px rgba(0,0,0,.25)}
+.scroll-progress{height:3px;background:rgba(98,151,189,.14);overflow:hidden}
+.scroll-progress-fill{height:100%;width:100%;transform:scaleX(0);transform-origin:left center;background:linear-gradient(90deg,#318ec8,#9b7fd8,#32a994,#d59448,#cc7798);will-change:transform}
+section{padding:92px 24px;scroll-margin-top:84px;position:relative;overflow:hidden;transition:transform 1.05s cubic-bezier(.16,1,.3,1),opacity 1.05s ease,border-radius 1.05s cubic-bezier(.16,1,.3,1),background 1.05s ease}
+section.morph-section{transform:scale(.988);opacity:.94;border-radius:32px}
 section.morph-section.section-active{transform:scale(1);opacity:1;border-radius:0}
 section.morph-section:before{content:"";position:absolute;width:360px;height:360px;border-radius:42% 58% 61% 39%/45% 41% 59% 55%;filter:blur(2px);opacity:.22;pointer-events:none;right:-120px;top:-110px;transform:rotate(0deg) scale(.85);transition:transform 1.15s cubic-bezier(.2,.8,.2,1),border-radius 1.15s ease}
 section.morph-section.section-active:before{transform:rotate(18deg) scale(1.15);border-radius:58% 42% 38% 62%/62% 54% 46% 38%}
@@ -193,11 +206,32 @@ h2{font-size:clamp(30px,4vw,45px);line-height:1.25;color:var(--navy);margin:8px 
 .system-dark .system-tag{background:rgba(255,255,255,.10);color:#dcebf5;border:1px solid rgba(255,255,255,.10)}
 
 footer{background:#091f35;color:#c8d6e2;text-align:center;padding:38px 20px}
-.reveal{opacity:0;transform:translateY(22px);transition:.65s ease}
-.reveal.show{opacity:1;transform:none}
+.reveal{opacity:1;transform:none;filter:none}
+.motion-ready .reveal{--enter-x:0px;--enter-y:36px;opacity:0;transform:translate3d(var(--enter-x),var(--enter-y),0) scale(.98);filter:blur(4px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform 1.05s cubic-bezier(.16,1,.3,1),filter .95s ease}
+.motion-ready .morph-section:nth-of-type(odd) .reveal{--enter-x:-36px}
+.motion-ready .morph-section:nth-of-type(even) .reveal{--enter-x:36px}
+.motion-ready[data-scroll-direction="up"] .morph-section:nth-of-type(odd) .reveal{--enter-x:36px;--enter-y:-30px}
+.motion-ready[data-scroll-direction="up"] .morph-section:nth-of-type(even) .reveal{--enter-x:-36px;--enter-y:-30px}
+.motion-ready .reveal.show{opacity:1;transform:translate3d(0,0,0) scale(1);filter:blur(0)}
+.morph-section .section-head.reveal{transition-delay:.04s}
+.morph-section .duty:nth-child(2),.morph-section .problem:nth-child(2){transition-delay:.09s}
+.morph-section .duty:nth-child(3),.morph-section .problem:nth-child(3){transition-delay:.16s}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ section,section.morph-section,section.morph-section.section-active,section.morph-section:before,.links a,.motion-ready .reveal,.motion-ready .reveal.show{transition:none!important;animation:none!important;transform:none!important;filter:none!important;opacity:1!important}
+ .scroll-progress-fill{will-change:auto}
+}
 @media(max-width:950px){
  .hero-main-title{margin-bottom:34px;font-size:clamp(28px,7vw,44px)}
- .links{display:none}.hero-grid,.info-grid{grid-template-columns:1fr}.photo-wrap{order:-1}.photo-card{width:270px}.hero{text-align:center}.hero-copy{margin:20px auto 0}.hero-actions,.badges{justify-content:center}
+ .nav{flex-wrap:wrap;gap:6px;justify-content:center;padding:8px 12px}
+ .brand{width:100%;text-align:center;font-size:14px}
+ .links{display:flex;gap:7px;width:100%;overflow-x:auto;padding:3px 3px 9px;scrollbar-width:none;justify-content:flex-start}
+ .links::-webkit-scrollbar{display:none}
+ .links a{flex:0 0 auto;font-size:12px;padding:7px 10px}
+ html{scroll-padding-top:134px}
+ section{scroll-margin-top:134px}
+ .hero{padding-top:145px}
+ .hero-grid,.info-grid{grid-template-columns:1fr}.photo-wrap{order:-1}.photo-card{width:270px}.hero{text-align:center}.hero-copy{margin:20px auto 0}.hero-actions,.badges{justify-content:center}
  .duty-grid,.gallery,.problem-grid{grid-template-columns:1fr}
  .system-layout,.system-layout.reverse{grid-template-columns:1fr}
  .system-layout.reverse .system-media,.system-layout.reverse .system-copy{order:initial}
@@ -213,7 +247,7 @@ footer{background:#091f35;color:#c8d6e2;text-align:center;padding:38px 20px}
 </style>
 </head>
 <body>
-<nav>
+<nav aria-label="เมนูนำทางหลัก">
  <div class="nav">
   <div class="brand">ประเมินพนักงานราชการ</div>
   <div class="links">
@@ -225,6 +259,7 @@ footer{background:#091f35;color:#c8d6e2;text-align:center;padding:38px 20px}
    <a href="#development">การพัฒนา</a>
   </div>
  </div>
+ <div class="scroll-progress" aria-hidden="true"><div class="scroll-progress-fill"></div></div>
 </nav>
 
 <section class="hero" id="home">
@@ -560,24 +595,73 @@ footer{background:#091f35;color:#c8d6e2;text-align:center;padding:38px 20px}
 </footer>
 
 <script>
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting) entry.target.classList.add("show");
-  });
-},{threshold:.12});
-document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+(() => {
+  const root = document.documentElement;
+  const sections = [...document.querySelectorAll('body > section')];
+  const navLinks = [...document.querySelectorAll('.links a')];
+  const reveals = [...document.querySelectorAll('.reveal')];
+  const progressBar = document.querySelector('.scroll-progress-fill');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let lastScrollY = window.scrollY;
+  let scrollScheduled = false;
 
-const sections=[...document.querySelectorAll("body > section")];
-sections.forEach(section=>section.classList.add("morph-section"));
-const sectionObserver=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      sections.forEach(s=>s.classList.remove("section-active"));
-      entry.target.classList.add("section-active");
+  root.dataset.scrollDirection = 'down';
+  if (!reducedMotion && 'IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => entry.target.classList.toggle('show', entry.isIntersecting));
+    }, { threshold: 0.06, rootMargin: '0px 0px -5% 0px' });
+    const sectionObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => entry.target.classList.toggle('section-active', entry.isIntersecting));
+    }, { threshold: 0.01, rootMargin: '-12% 0px -12% 0px' });
+    sections.forEach(section => {
+      section.classList.add('morph-section');
+      sectionObserver.observe(section);
+    });
+    reveals.forEach(el => revealObserver.observe(el));
+    root.classList.add('motion-ready');
+  } else {
+    sections.forEach(section => section.classList.add('section-active'));
+    reveals.forEach(el => el.classList.add('show'));
+  }
+
+  function updateScroll() {
+    scrollScheduled = false;
+    const y = window.scrollY;
+    if (Math.abs(y - lastScrollY) > 2) {
+      root.dataset.scrollDirection = y < lastScrollY ? 'up' : 'down';
+      lastScrollY = y;
     }
-  });
-},{threshold:.38});
-sections.forEach(section=>sectionObserver.observe(section));
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    if (progressBar) {
+      const progress = maxScroll > 0 ? Math.min(1, Math.max(0, y / maxScroll)) : 0;
+      progressBar.style.transform = 'scaleX(' + progress + ')';
+    }
+    const reference = Math.min(window.innerHeight * .35 + 78, window.innerHeight * .7);
+    let current = sections[0];
+    sections.forEach(section => {
+      if (section.getBoundingClientRect().top <= reference) current = section;
+    });
+    const activeId = current.id.startsWith('system-') && current.id !== 'systems-intro'
+      ? 'systems-intro' : current.id;
+    navLinks.forEach(link => {
+      const active = link.getAttribute('href') === '#' + activeId;
+      link.classList.toggle('is-active', active);
+      if (active) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+    const darkSection = current.matches('.overview,.duties,.systems-intro,.system-dark');
+    root.dataset.navTheme = darkSection ? 'dark' : 'light';
+  }
+  function requestUpdate() {
+    if (!scrollScheduled) {
+      scrollScheduled = true;
+      requestAnimationFrame(updateScroll);
+    }
+  }
+  window.addEventListener('scroll', requestUpdate, {passive:true});
+  window.addEventListener('resize', requestUpdate, {passive:true});
+  updateScroll();
+})();
 </script>
 </body>
 </html>
